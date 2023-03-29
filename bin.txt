@@ -1,0 +1,28 @@
+
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String
+})
+
+const postSchema = new mongoose.Schema({
+  title: String,
+  postedBy: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+  }
+})
+
+const User = mongoose.model('User', userSchema);
+const Post = mongoose.model('Post', postSchema);
+
+const action=async()=>{
+try{
+  let x=await User.find();
+  let y=await Post.find().populate("postedBy");
+  console.log(JSON.stringify(y))
+}
+catch(err){
+   console.log(err.message)
+}
+}
+action()

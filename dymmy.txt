@@ -1,0 +1,43 @@
+{
+    "page":1,
+    "length":10,
+    "searchstr":"Clothes",
+    "sortBy":"something",
+    "forExport":"something",
+    "fillkeyword":"keyword"
+}
+ {
+    _id: ObjectId("63f6191319f46047d3727389"),
+    departmentName: 'Clothes',
+    description: 'Mens Wear',
+    createdAt: '1677072659532',
+    createdBy: 'Vicky',
+    updatedAt: '1677072659532',
+    updatedBy: 'Vicky',
+    isDeleted: 0,
+    isActive: 1,
+    __v: 0
+  }
+------------->SaveDept.
+   // try {
+  //   const send = {
+  //     id: body.id,
+  //     departmentName: departmentName,
+  //     description: "Mens Wear",
+  //     createdAt: new Date(),
+  //     createdBy: "Vicky",
+  //     updatedAt: new Date(),
+  //     updatedBy: "Vicky",
+  //     isDeleted: 0,
+  //     isActive: 1,
+  //   };
+  //   await DepartmentService.insert(send);
+  //   const response = {
+  //     status: "added",
+  //     message: `the department ${body.department} has been added to the database`,
+  //   };
+  //   res.end(JSON.stringify(response));
+  // } catch (err) {
+  //   console.log(err.message);
+  //   res.end(err.message);
+  // }
